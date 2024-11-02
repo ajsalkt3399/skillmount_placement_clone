@@ -1,0 +1,657 @@
+/* Basic CSS reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    -ms-overflow-style: none;
+    /* For Internet Explorer and Edge */
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    scrollbar-width: thin;
+    /* Allows a minimal scrollbar */
+}
+
+@media (hover: none) {
+    ::-webkit-scrollbar {
+        display: block;
+        /* Enables scrollbar for touch devices */
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    /* Set the default font */
+
+}
+
+/* Example usage of Rubik font for specific elements */
+img {
+    display: block;
+    width: 100%;
+
+
+}
+
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.open-sans {
+    font-family: 'Open Sans', sans-serif !important;
+
+}
+
+.gradient-bg {
+    background: linear-gradient(to bottom, #e8e9eb, #fff);
+    /* Adjust #f5f5f5 for a lighter or darker gradient */
+}
+
+.banner_section {
+    background-image: url('../images/design.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left 6vh;
+    overflow: hidden;
+    height: auto;
+    position: relative;
+    padding: 0px 5%;
+    background-color: #f2f3f5;
+
+}
+
+.banner_image {
+    position: absolute;
+    width: 35%;
+    left: 4%;
+    max-height: 90vh;
+    overflow: hidden;
+    bottom: 0;
+    z-index: 0 !important;
+}
+
+.banner_content {
+    margin: 200px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 55%;
+
+    gap: 20px;
+}
+
+.banner_content_top {
+    z-index: 10;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.banner_content_bottom {
+    width: 100%;
+    height: 20%;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 100 !important;
+}
+
+.banner_content_image_one {
+    height: 20%;
+}
+
+.banner_content_image_two {
+    max-width: 350px;
+}
+
+.banner_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+}
+
+.banner_bottom h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    color: #1E1E1E;
+
+}
+
+.banner_bottom span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: #1E1E1E;
+
+}
+
+
+.register-button {
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #003884;
+    color: white;
+    border-radius: 25px;
+    margin-top: 20px;
+    padding: 12px 80px;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.middle_section {
+
+    width: 100%;
+    display: block;
+
+}
+
+.meet_employer_section {
+
+    width: 100%;
+
+    padding: 50px 5%;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.meet_employer_section h2 {
+    margin-bottom: 30px;
+
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    color: #274a84;
+
+
+}
+
+.meet_employer_section .bottom_section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2%;
+
+}
+
+.meet_employer_section .bottom_section .logo_section {
+
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+
+}
+
+
+.meet_employer_section .bottom_section .logo_section h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #1E1E1E;
+
+}
+
+.meet_employer_section .bottom_section .logo_section .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    min-width: 80px;
+    max-width: 150px;
+    padding: 5px;
+
+}
+
+.highlights_section {
+    display: flex;
+    background-color: #e8e9eb;
+    justify-content: space-between;
+
+}
+
+.left_section {
+    width: 50%;
+
+    padding: 3% 7%;
+
+}
+
+.left_section h2 {
+
+
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    color: #274a84;
+    margin-bottom: 20px;
+
+}
+
+.blue-squares {
+    list-style-type: square;
+    /* Keeps the bullet shape as square */
+    padding-left: 20px;
+    /* Adds some space between the bullets and the text */
+}
+
+.blue-squares li::marker {
+    color: #0c8be7;
+    /* Sets the color of the square bullets to blue */
+}
+
+.left_section li {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: #1E1E1E;
+    margin-bottom: 10px;
+}
+
+.right_secction {
+    width: 50%;
+    height: 100%;
+
+}
+
+.right_secction img {}
+
+.footer_section {
+    overflow: hidden;
+    height: auto;
+    padding: 6% 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #012758;
+}
+
+.reserve-button {
+    margin-bottom: 35px;
+    font-size: 2.5rem;
+    font-weight: 300;
+
+    color: white;
+    border-radius: 50px;
+    margin-top: 20px;
+    padding: 8px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border: dotted 3px white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.top-row td {
+    width: 11.11%;
+    /* 100% / 9 = 11.11% */
+    padding: 2%;
+    text-align: center;
+
+}
+
+.bottom-row td {
+    width: 20%;
+    /* 100% / 5 = 20% */
+    padding: 0px;
+    text-align: center;
+    padding: 0px 1%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.bottom-row td:first-child {
+    text-align: left;
+    padding: 0px 2%;
+}
+
+.bottom-row td:last-child {
+    text-align: right;
+
+}
+
+.contact_section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+
+}
+
+.contact_logo {
+    width: 20px;
+    /* Adjust the size of the icons as needed */
+    height: 20px;
+    object-fit: contain;
+
+}
+
+.contact_logo span {
+    color: white;
+
+}
+
+.contact_each {
+    flex-direction: column;
+    gap: 15px;
+    font-size:16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+.contact_each:hover {
+    color: #fff;
+    /* Ensures the text remains white on hover */
+}
+
+.social_media_section h4 {
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.social_media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-size: 20px;
+
+}
+
+.social_logo {
+    width: 20px;
+    height: 20px;
+}
+
+.social_logo img {
+    object-fit: contain;
+}
+
+.mobile_content {
+    display: none;
+
+}
+
+.table_image {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+@media (max-width: 930px) {
+    .highlights_section {
+        flex-direction: column-reverse;
+        /* This will place the second element at the top */
+    }
+
+    .left_section {
+        width: 100%;
+        padding: 5% 7%;
+    }
+
+    .left_section li {
+
+        font-size: 19px;
+
+    }
+
+    .contact_section {
+        justify-content: space-evenly
+    }
+
+    
+
+    .right_secction {
+        width: 100%;
+        height: 40%;
+
+        max-height: 450px;
+        overflow: hidden;
+    }
+
+    .register-button {
+        padding: 12px 22px;
+    }
+
+    .banner_bottom {
+        gap: 25px;
+    }
+
+    .banner_bottom h3 {
+        font-size: 2.2rem;
+    }
+
+    .banner_content {
+        margin: 90px 0px;
+
+    }
+
+    .banner_bottom span {
+        font-size: 1.1rem;
+    }
+
+    .meet_employer_section h2 {
+
+        font-size: 37px;
+
+    }
+
+    .banner_content_bottom {
+
+        padding-bottom: 70px;
+
+    }
+
+    .meet_employer_section .bottom_section .logo_section h4 {
+
+        font-size: 17px;
+
+    }
+
+    .left_section h2 {
+        font-size: 37px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner_image {
+        display: none;
+    }
+
+    .banner_content_bottom {
+
+        padding-bottom: 50px;
+
+    }
+
+    .left_section {
+        padding: 5% 8%;
+    }
+
+    .left_section li {
+
+        font-size: 17px;
+
+    }
+
+    .top-row td {
+
+
+        padding: 1%;
+    }
+
+    .banner_content {
+        width: 80%;
+        margin: 75px 0px;
+
+    }
+
+    .reserve-button {
+        font-size: 32px;
+    }
+
+    .bottom-row td {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .reserve-button {
+        font-size: 22px;
+    }
+
+    .banner_bottom {
+        flex-direction: column;
+    }
+
+    .banner_bottom h3 {
+        font-size: 1.7rem;
+    }
+
+    .banner_bottom span {
+        font-size: 16px;
+    }
+
+    .banner_content {
+        width: 100%;
+        margin: 55px 0px;
+        align-items: center;
+    }
+
+    .register-button {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    .lap_content {
+        display: none;
+    }
+
+    .mobile_content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 1rem;
+        color: #fff;
+
+    }
+
+    .banner_content_bottom {
+        width: 100%;
+        justify-content: center;
+        margin-top: 24px;
+        padding-bottom: 30px;
+
+    }
+
+    .banner_section {
+
+        height: auto;
+
+    }
+
+    .footer_section {
+        height: auto;
+    }
+
+    .meet_employer_section h2 {
+
+        font-size: 27px;
+
+    }
+
+    .left_section h2 {
+        font-size: 27px;
+    }
+
+    .meet_employer_section .bottom_section .logo_section h4 {
+
+        font-size: 14px;
+
+    }
+}
+
+@media (max-width: 360px) {}
+
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+.arrow_style {
+    height: 60px;
+    object-fit: cover;
+    overflow: hidden;
+}
